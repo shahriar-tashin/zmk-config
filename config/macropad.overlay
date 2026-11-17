@@ -1,0 +1,30 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,physical-layout = &default_layout;
+    };
+
+    default_layout: default_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "Test Macropad";
+        transform = <&default_transform>;
+        keys = <&key_physical_attrs(0, 0, 0, 0)>;
+    };
+
+    default_transform: keymap_transform_0 {
+        compatible = "zmk,matrix-transform";
+        columns = <1>;
+        rows = <1>;
+        map = <
+            RC(0,0)
+        >;
+    };
+
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-direct";
+        wakeup-source;
+        input-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    };
+};
