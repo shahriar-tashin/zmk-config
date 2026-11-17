@@ -1,4 +1,4 @@
-#include <behavious.dsti>
+#include <behaviors.dsti>
 #include <dt-bindings/zmk/keys.h>
 
 /{
