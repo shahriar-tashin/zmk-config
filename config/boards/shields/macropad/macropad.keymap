@@ -7,15 +7,15 @@
 
         default_layer {
             bindings = <
-                &kp A
-                &kp B
-                &kp C
-                &kp D
-                &kp E
+                &kp K_VOL_UP
+                &kp UP
+                &kp K_VOL_DN
+                &kp LEFT
+                &kp DOWN
+                &kp RIGHT
                 &kp F
-                &kp G
-                &kp H
-                &kp I
+                &kp SPACE
+                &kp M
             >;
         };
     };
